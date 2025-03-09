@@ -80,9 +80,9 @@ function displayScripts() {
         <h3>${script.title}</h3>
         <div class="script-badges">
             ${script.views ? `<span class="badge views"><i class="fas fa-eye"></i> ${script.views}</span>` : ''}
+            ${script.isUniversal ? '<span class="badge universal"><i class="fas fa-globe"></i> Universal</span>' : ''}
             ${script.verified ? '<span class="badge verified"><i class="fas fa-check-circle"></i> Verified</span>' : ''}
             ${script.key ? '<span class="badge key-system"><i class="fas fa-key"></i> Key System</span>' : ''}
-            ${script.isUniversal ? '<span class="badge universal"><i class="fas fa-globe"></i> Universal</span>' : ''}
         </div>
     </div>
     <div class="script-description">${script.game.name}</div>
