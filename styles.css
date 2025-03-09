@@ -215,9 +215,14 @@ button:disabled {
     transition: all 0.3s ease;
 }
 
+#searchInput:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 1.5px rgba(38, 38, 38, 0.3); /* Blackish glow */
+}
+
 #searchInput:focus {
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(38, 38, 38, 0.3); /* Blackish glow */
+    box-shadow: 0 0 0 3px rgba(38, 38, 38, 0.5); /* Blackish glow */
 }
 
 #searchBtn {
@@ -405,6 +410,12 @@ button:disabled {
 }
 
 .badge.views {
+    background: #303030; /* Blackish background */
+    color: #f0f0f0; /* Light gray for better readability */
+    border: 1px solid #151515; /* Subtle border */
+}
+
+.badge.universal {
     background: #303030; /* Blackish background */
     color: #f0f0f0; /* Light gray for better readability */
     border: 1px solid #151515; /* Subtle border */

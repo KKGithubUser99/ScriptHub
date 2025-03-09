@@ -82,6 +82,7 @@ function displayScripts() {
             ${script.views ? `<span class="badge views"><i class="fas fa-eye"></i> ${script.views}</span>` : ''}
             ${script.verified ? '<span class="badge verified"><i class="fas fa-check-circle"></i> Verified</span>' : ''}
             ${script.key ? '<span class="badge key-system"><i class="fas fa-key"></i> Key System</span>' : ''}
+            ${script.isUniversal ? '<span class="badge universal"><i class="fas fa-globe"></i> Universal</span>' : ''}
         </div>
     </div>
     <div class="script-description">${script.game.name}</div>
@@ -96,7 +97,7 @@ function displayScripts() {
             navigator.clipboard.writeText(script.script)
                 .then(() => {
                     copyBtn.innerHTML = '<span>Copied!</span><i class="fas fa-check"></i>';
-                    copyBtn.style.background = '#10B981';
+                    copyBtn.style.background = '#22c55ee6';
 
                     setTimeout(() => {
                         copyBtn.innerHTML = '<span>Copy Script</span><i class="fas fa-copy"></i>';
@@ -181,8 +182,8 @@ function updateStats() {
         gameCount.textContent = `${uniqueGames.size} Games`;
     }
     else{
-        scriptCount.textContent = `Scripts`;
-        gameCount.textContent = `Games`;
+        scriptCount.textContent = `- Scripts`;
+        gameCount.textContent = `- Games`;
     }
 }
 window.addEventListener('load', function() {
